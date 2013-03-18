@@ -1,7 +1,7 @@
 var CallbackForm = require('./form');
 var Dialog = require('dialog');
 
-function Callback(url){
+function callback(url){
 
   var d = new Dialog({
     overlay: true,
@@ -37,5 +37,12 @@ function Callback(url){
   return d;
 }
 
-Callback.Form = CallbackForm;
-module.exports = Callback;
+module.exports = function(){
+  $('body').on('click', '.js-book-callback', function(event){
+    event.preventDefault();
+    event.stopPropagation();
+    callback(event.currentTarget.getAttribute('href'));
+  });
+};
+
+module.exports.Form = CallbackForm;
