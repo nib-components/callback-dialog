@@ -1,6 +1,6 @@
 {
   "name": "callback-dialog",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "scripts": ["index.js", "form.js"],
   "dependencies": {
     "nib-components/dialog": "0.1.2",

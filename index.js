@@ -11,7 +11,7 @@ function callback(url){
   d.on('show', function(){
 
     var form = new CallbackForm({
-      el: d.el.find('form')
+      el: d.el.querySelector('form')
     });
 
     form.on('cancel', d.hide, d);
